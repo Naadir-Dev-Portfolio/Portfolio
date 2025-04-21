@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "finance-dashboard",
+    "title": "Financial Health Dashboard",
+    "img": "png1.png",
+    "desc": "Interactive finance KPIs with drill‑down charts in PyQt6.",
+    "code": "https://github.com/yourhandle/finance-dashboard",
+    "demo": null
+  },
+  {
+    "slug": "desktop-ai",
+    "title": "Desktop AI Assistant",
+    "img": "png2.png",
+    "desc": "Gemini‑powered assistant for quick queries & app launches.",
+    "code": "https://github.com/yourhandle/desktop-ai",
+    "demo": null
+  }
+]
