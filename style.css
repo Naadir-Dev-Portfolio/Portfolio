@@ -361,3 +361,41 @@ ul { margin: 0; padding: 0; list-style: none; }
     height: 50px;
   }
 }
+
+
+@media (max-width: 600px) {
+  /* Correct navbar alignment */
+  .nav-container {
+    padding: 1rem 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav-links {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  /* Prevent skillset (subtitle) from cutting off */
+  .subtitle {
+    white-space: normal;
+    overflow-wrap: break-word;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Adjust the scroll-down arrow to not overlap */
+  .scroll-down {
+    bottom: 1rem;
+    opacity: 0.75;
+  }
+
+  .hero {
+    padding-bottom: 5rem; /* additional padding at bottom to create space */
+  }
+}
