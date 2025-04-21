@@ -1,76 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>First Name Last Name – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <title>First Name Last Name — Portfolio</title>
+
+  <!-- Google font & stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- ▓▓ HEADER (fixed, translucent full‑width) ▓▓ -->
   <header class="site-header">
     <nav class="nav-container">
       <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#books">Books</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="https://sample.com" target="_blank">Science & Philosophy</a></li>
         <li><a href="https://github.com/yourhandle" target="_blank">GitHub</a></li>
       </ul>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- ▓▓ HERO (full viewport) ▓▓ -->
   <section class="hero" id="home">
+    <div class="hero-overlay"></div>
     <div class="hero-inner">
-      <h1>First Name <span>Last Name</span></h1>
-      <p class="subtitle">
-        Automation Specialist <span class="pipe">|</span>
-        Data Reporting Expert <span class="pipe">|</span>
-        VBA & Python Developer <span class="pipe">|</span>
-        Power BI User
-      </p>
-      <p class="tagline">Automating admin &amp; data so teams work smarter</p>
+      <h1>Naadir Duglas</h1>
+	<p class="tagline">Precision‑focused admin &amp; data automation so teams work smarter</p>
+   	<p class="subtitle">Automation Specialist <span class="pipe">|</span>
+   	    Data Reporting Expert <span class="pipe">|</span>
+    	    VBA/Excel & Python Developer <span class="pipe">|</span>
+    	    Power Automate & Power BI Report Builder
+  	</p>
+
+      <!-- MOVED: About Me into hero -->
+      <div id="about" class="hero-about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+           With hands‑on experience managing developer teams and owning end‑to‑end projects, I specialize in automating administrative workflows. From custom Excel and Python applications to real‑time dashboards and AI integrations, I deliver reliable, one‑click solutions that reclaim time, uphold data accuracy, and drive operational excellence.
+          <br><br>
+          <strong>
+            <a href="#main-content" class="view-projects-link">
+              View my projects below
+            </a>
+          </strong>
+        </p>
+      </div>
     </div>
+
     <a href="#main-content" class="scroll-down" aria-label="Scroll to content">
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="9"></circle>
         <polyline points="8 10 12 14 16 10"></polyline>
       </svg>
     </a>
   </section>
 
-  <!-- MAIN CONTENT BOX -->
-  <main id="main-content" class="content-box">
+  <!-- ▓▓ MAIN CARD (hidden → slides in) ▓▓ -->
+  <main id="main-content" class="content-box hidden">
+
     <!-- PROJECTS -->
-    <section id="projects" class="section section-light">
+    <section id="projects" class="section reveal-right section-light">
       <h2 class="section-title">Projects</h2>
-      <div id="projectsGrid" class="projects-grid"></div>
+      <p class="section-text">Automations, dashboards and AI tools I’ve shipped.</p>
+
+      <ul class="tab-nav" id="proj-tabs">
+        <li data-target="python" class="active">Python</li>
+        <li data-target="powerbi">Power BI</li>
+        <li data-target="ai">AI</li>
+        <li data-target="pyqt">PyQt6 Desktop</li>
+        <li data-target="mobile">Mobile Apps</li>
+        <li data-target="misc">Misc</li>
+      </ul>
+
+      <div class="tab-panel active" id="panel-python"><div class="projects-grid" id="grid-python"></div></div>
+      <div class="tab-panel" id="panel-powerbi"><div class="projects-grid" id="grid-powerbi"></div></div>
+      <div class="tab-panel" id="panel-ai"><div class="projects-grid" id="grid-ai"></div></div>
+      <div class="tab-panel" id="panel-pyqt"><div class="projects-grid" id="grid-pyqt"></div></div>
+      <div class="tab-panel" id="panel-mobile"><div class="projects-grid" id="grid-mobile"></div></div>
+      <div class="tab-panel" id="panel-misc"><div class="projects-grid" id="grid-misc"></div></div>
+
+      <h3 class="stack-title">Tool‑stack Highlights</h3>
+      <ul class="stack-list">
+        <li>Python</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>PyQt6</li>
+        <li>Streamlit</li><li>FastAPI</li><li>OpenAI / Gemini API</li>
+        <li>Power Query</li><li>Power BI</li><li>Power Automate</li><li>VBA / Excel</li>
+      </ul>
     </section>
 
     <!-- BOOKS -->
-    <section id="books" class="section section-dark">
+    <section id="books" class="section reveal-left books-panel">
       <h2 class="section-title">Books in Progress</h2>
-      <div id="booksGrid" class="books-grid"></div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section section-light about">
-      <h2 class="section-title">About Me</h2>
-      <p>
-        I started in management information, discovered automation’s power,
-        and now build VBA, Python &amp; AI tools to eliminate hours of manual
-        data entry—giving teams back their day.
-      </p>
+  	<p class="section-text">
+    	   I’m currently drafting these upcoming titles—deep dives into AI‑powered productivity, prompt engineering, and modern reporting workflows.
+ 	</p>
+      <div class="books-grid" id="booksGrid"></div>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>First Name Last Name  <span id="year"></span></p>
+    <p>Naadir Duglas  <span id="year"></span></p>
   </footer>
 
   <script src="script.js"></script>
