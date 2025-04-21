@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>First Name Last Name – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello! I'm [Your Name]</h1>
-  <p>Welcome to my portfolio site. Stay tuned for more!</p>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://github.com/yourhandle" target="_blank">GitHub</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <h1>First Name <span>Last Name</span></h1>
+      <p class="subtitle">
+        Automation Specialist <span class="pipe">|</span>
+        Data Reporting Expert <span class="pipe">|</span>
+        VBA & Python Developer <span class="pipe">|</span>
+        Power BI User
+      </p>
+      <p class="tagline">Automating admin &amp; data so teams work smarter</p>
+    </div>
+    <a href="#main-content" class="scroll-down" aria-label="Scroll to content">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"></circle>
+        <polyline points="8 10 12 14 16 10"></polyline>
+      </svg>
+    </a>
+  </section>
+
+  <!-- MAIN CONTENT BOX -->
+  <main id="main-content" class="content-box">
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-light">
+      <h2 class="section-title">Projects</h2>
+      <div id="projectsGrid" class="projects-grid"></div>
+    </section>
+
+    <!-- BOOKS -->
+    <section id="books" class="section section-dark">
+      <h2 class="section-title">Books in Progress</h2>
+      <div id="booksGrid" class="books-grid"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-light about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I started in management information, discovered automation’s power,
+        and now build VBA, Python &amp; AI tools to eliminate hours of manual
+        data entry—giving teams back their day.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>First Name Last Name  <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
