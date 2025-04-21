@@ -9,10 +9,10 @@
   --shadow: 0 8px 24px rgba(0,0,0,.15);
   --tr: .45s cubic-bezier(.25,.8,.25,1);
 
-  /* — Hero‑About gap (below tagline) — */
+  /* Hero-About gap (below tagline) */
   --hero-about-gap: 9rem;
 
-  /* — Scroll‑down arrow size & position — */
+  /* Scroll-down arrow size & position */
   --scroll-down-size: 80px;
   --scroll-down-stroke: 1;
   --scroll-down-bottom: 4rem;
@@ -63,7 +63,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: url('images/background.png') center/cover no-repeat;
   opacity: .3;
 }
-.hero-inner { position: relative; z-index: 1; }
+.hero-inner { position: relative; z-index: 1; width: 100%; padding: 0 1rem; box-sizing: border-box; }
 
 .hero h1 {
   font-size: clamp(3.5rem,8vw,6rem);
@@ -78,58 +78,60 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 3rem; font-weight: 1000; color: #ededed;
 }
 
-/* — About Me in hero — */
 .hero-about {
   margin-top: var(--hero-about-gap);
-  background: rgba(0, 0, 0, 0.12);   /* lighter, more transparent */
-  padding: 1.5rem;                  /* keep the same padding */
-  border-radius: 38px;              /* more rounded corners */
+  background: rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+  border-radius: 38px;
   display: inline-block;
   max-width: 90%;
   box-sizing: border-box;
 }
-.hero-about .section-title {
+.hero-about .section-title, .hero-about p, .hero-about .view-projects-link { color: #fff; }
+
+/* ===== Scroll‑down arrow ===== */
+.scroll-down {
+  position: absolute;
+  bottom: var(--scroll-down-bottom);
+  left: 50%;
+  transform: translateX(-50%);
   color: #fff;
 }
-.hero-about p {
-  max-width: 850px;
-  margin: 0 auto 1.2rem;
-  text-align: center;
-  font-size: 1.5rem;
-  color: #fff;
-}
-.hero-about .view-projects-link {
-  color: #fff;
-  text-decoration: none
+.scroll-down svg {
+  width: var(--scroll-down-size);
+  height: var(--scroll-down-size);
+  stroke-width: var(--scroll-down-stroke);
+  stroke: #fff;
 }
 
-/* Tighten hero text spacing */
-.hero-inner h1 {
-  margin-bottom: 0.5rem;    /* smaller gap below the name */
-}
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    background: rgba(30,30,30,.9);
+    padding: 0.5rem 0;
+  }
+  .nav-links a { padding: 0.5rem; }
 
-.hero-inner .tagline {
-  margin: 0 0 0.5rem;       /* only 0.5rem below the tagline */
-  font-size: 1.6rem;        /* whatever size you prefer */
-}
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+    margin-top: 70px;
+  }
 
-.hero-inner .subtitle {
-  margin: 0 0 1rem;         /* slim gap before the next section */
-  font-size: 1.4rem;          /* adjust as needed */
-}
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
 
-.hero-inner {
-  /* allow flex item to shrink past its content’s min-width */
-  min-width: 0;
+  :root {
+    --hero-about-gap: 3rem;
+  }
 
-  /* make it span the full width of the hero */
-  width: 100%;
-
-  /* ensure padding is included in that width */
-  box-sizing: border-box;
-
-  /* adjust side‑padding as you like */
-  padding: 0 1rem;
+  .hero-inner {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 
 
