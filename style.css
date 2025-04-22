@@ -32,22 +32,64 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ===== Header ===== */
 .site-header {
-  position: fixed; top: 0; width: 100%; z-index: 300;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 300;
   background: rgba(30,30,30,.35);
   backdrop-filter: blur(10px);
 }
 .nav-container {
-  max-width: 92%; margin: 0 auto; padding: 1.6rem 0;
+  max-width: 92%;
+  margin: 0 auto;
+  padding: 1.6rem 0;
   display: flex;
+  align-items: center;
+  position: relative;
 }
 .nav-links {
-  display: flex; width: 100%; justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .nav-links a {
-  font-weight: 600; color: #fff;
+  font-weight: 600;
+  color: #fff;
   transition: opacity .25s;
 }
 .nav-links a:hover { opacity: .7; }
+
+/* Hamburger toggle (hidden on desktop) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-toggle .hamburger {
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  display: inline-block;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: '';
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  transition: transform .3s ease;
+}
+.nav-toggle .hamburger::before { top: -7px; }
+.nav-toggle .hamburger::after { top: 7px; }
 
 /* ===== Hero ===== */
 .hero {
@@ -55,85 +97,76 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-top: 84px;
   background: #4f646e;
   position: relative;
-  display: flex; align-items: center;
-  justify-content: center; text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .hero-overlay {
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   background: url('images/background.png') center/cover no-repeat;
   opacity: .3;
 }
-.hero-inner { position: relative; z-index: 1; }
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
 
 .hero h1 {
   font-size: clamp(3.5rem,8vw,6rem);
-  font-weight: 800; color: #fff; margin: .35rem 0;
+  font-weight: 800;
+  color: #fff;
+  margin: .35rem 0;
 }
 .subtitle {
-  font-size: 1.35rem; font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 600;
   margin-bottom: .55rem;
 }
 .pipe { margin: 0 .5rem; color: rgba(255,255,255,.55); }
 .tagline {
-  font-size: 3rem; font-weight: 1000; color: #ededed;
+  font-size: 3rem;
+  font-weight: 1000;
+  color: #ededed;
 }
 
 /* — About Me in hero — */
 .hero-about {
   margin-top: var(--hero-about-gap);
-  background: rgba(0, 0, 0, 0.12);   /* lighter, more transparent */
-  padding: 1.5rem;                  /* keep the same padding */
-  border-radius: 38px;              /* more rounded corners */
+  background: rgba(255,255,255,0.5);
+  padding: 1.5rem;
+  border-radius: 38px;
   display: inline-block;
   max-width: 90%;
   box-sizing: border-box;
 }
-.hero-about .section-title {
-  color: #fff;
-}
+.hero-about .section-title {color: rgba(0,0,0,0.79); }
 .hero-about p {
   max-width: 850px;
   margin: 0 auto 1.2rem;
   text-align: center;
   font-size: 1.5rem;
-  color: #fff;
+  color: rgba(0,0,0,0.7);
 }
 .hero-about .view-projects-link {
-  color: #fff;
-  text-decoration: none
+  color: rgba(0,0,0,0.8);
+  text-decoration: none;
 }
 
 /* Tighten hero text spacing */
-.hero-inner h1 {
-  margin-bottom: 0.5rem;    /* smaller gap below the name */
-}
-
+.hero-inner h1 { margin-bottom: 0.5rem; }
 .hero-inner .tagline {
-  margin: 0 0 0.5rem;       /* only 0.5rem below the tagline */
-  font-size: 1.6rem;        /* whatever size you prefer */
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
 }
-
 .hero-inner .subtitle {
-  margin: 0 0 1rem;         /* slim gap before the next section */
-  font-size: 1.4rem;          /* adjust as needed */
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
 }
-
-.hero-inner {
-  /* allow flex item to shrink past its content’s min-width */
-  min-width: 0;
-
-  /* make it span the full width of the hero */
-  width: 100%;
-
-  /* ensure padding is included in that width */
-  box-sizing: border-box;
-
-  /* adjust side‑padding as you like */
-  padding: 0 1rem;
-}
-
-
-
 
 /* ===== Scroll‑down arrow ===== */
 .scroll-down {
@@ -148,11 +181,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   height: var(--scroll-down-size);
   stroke-width: var(--scroll-down-stroke);
   stroke: #fff;
-}
-.scroll-down svg circle,
-.scroll-down svg polyline {
-  stroke: currentColor;
-  stroke-width: var(--scroll-down-stroke);
 }
 
 /* ===== Content card ===== */
@@ -185,24 +213,42 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: linear-gradient(180deg, var(--panel) 0%, var(--panel-grad) 100%);
 }
 .section-title {
-  font-size: 2.4rem; font-weight: 700; text-align: center;
-  margin-bottom: 1rem; color: var(--txt-dark);
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--txt-dark);
 }
 .books-panel .section-title { color: #fff; }
 .section-text {
-  text-align: center; font-size: 1rem;
-  margin-bottom: 1.8rem; color: #555;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
+  color: #555;
+}
+/* in dark books panel override */
+#books .section-text {
+  color: #ddd;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
 }
 
 /* ===== Tabs ===== */
 .tab-nav {
-  display: flex; justify-content: center;
-  gap: .6rem; flex-wrap: wrap; margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
 }
 .tab-nav li {
-  padding: .4rem 1rem; border-radius: 8px;
-  font-weight: 600; font-size: .85rem;
-  cursor: pointer; background: #dcdcdc; color: #333;
+  padding: .4rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .85rem;
+  cursor: pointer;
+  background: #dcdcdc;
+  color: #333;
   transition: var(--tr);
 }
 .tab-nav li.active { background: #374957; color: #fff; }
@@ -211,14 +257,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ===== Projects grid ===== */
 .projects-grid {
-  display: grid; gap: 2rem;
+  display: grid;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   justify-items: center;
 }
 .card {
-  max-width: 340px; width: 100%;
-  background: var(--white); border-radius: var(--radius);
-  overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  max-width: 340px;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
   transition: transform .35s, box-shadow .35s;
 }
 .card:hover {
@@ -228,174 +278,173 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card img { width: 100%; height: 180px; object-fit: cover; }
 .card-body { padding: 1rem; }
 .card h3 {
-  font-size: 1.25rem; font-weight: 600;
-  margin-bottom: .4rem; color: var(--txt-dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+  color: var(--txt-dark);
 }
 .card p {
-  font-size: .92rem; margin-bottom: .8rem; color: #444;
+  font-size: .92rem;
+  margin-bottom: .8rem;
+  color: #444;
 }
 .card-links a {
-  display: inline-block; background: #374957; color: #fff;
-  padding: .45rem .9rem; border-radius: var(--radius);
-  font-size: .8rem; margin-right: .5rem; transition: transform .25s;
+  display: inline-block;
+  background: #374957;
+  color: #fff;
+  padding: .45rem .9rem;
+  border-radius: var(--radius);
+  font-size: .8rem;
+  margin-right: .5rem;
+  transition: transform .25s;
 }
 .card-links a:hover {
-  transform: scale(1.05); opacity: .85;
+  transform: scale(1.05);
+  opacity: .85;
 }
 
 /* ===== Stack list ===== */
 .stack-title {
-  text-align: center; font-size: 1.2rem;
-  font-weight: 600; margin: 2.2rem 0 .7rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2.2rem 0 .7rem;
   color: var(--txt-dark);
 }
 .stack-list {
-  display: flex; flex-wrap: wrap; gap: .55rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
   justify-content: center;
 }
 .stack-list li {
-  background: #e5e5e5; padding: .35rem .9rem;
-  border-radius: 5px; font-size: .75rem;
-  font-weight: 600; color: #333;
+  background: #e5e5e5;
+  padding: .35rem .9rem;
+  border-radius: 5px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: #333;
 }
 
 /* ===== Books grid ===== */
 .books-grid {
-  display: grid; gap: 1.6rem;
+  display: grid;
+  gap: 1.6rem;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
 }
 .book-card { text-align: center; }
 .book-card img {
-  width: 140px; height: 200px; object-fit: cover;
-  border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
   transition: transform .3s;
 }
 .book-card img:hover { transform: scale(1.07); }
 .book-card span {
-  display: block; margin-top: 1rem; font-size: .9rem;
-  font-weight: 600; color: #fff; text-align: center;
+  display: block;
+  margin-top: 1rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #fff;
 }
-
-/* in style.css */
-#books .section-text {
-  color: #ddd;          /* lighter color on the dark panel */
-  margin-bottom: 2rem;  /* a bit more breathing room */
-  font-size: 1.1rem;    /* slightly larger if you like */
-}
-
 
 /* ===== Footer ===== */
 .site-footer {
-  text-align: center; padding: 1rem 0 2rem;
-  font-size: .9rem; color: #999;
+  text-align: center;
+  padding: 1rem 0 2rem;
+  font-size: .9rem;
+  color: #999;
 }
 
+/* ===== Mobile Styles (complete fixes) ===== */
+@media (max-width: 768px) {
+  /* Tweak hero‑about gap */
+  :root { --hero-about-gap: 3rem; }
 
-/* ===== Responsive Adjustments (Mobile) ===== */
-@media (max-width: 600px) {
-  /* Navbar adjustments */
+  /* Header overlay & spacing sync */
+  .site-header {
+    background: rgba(30,30,30,0.9);
+    padding: 0.75rem 0;
+  }
   .nav-container {
-    padding: 1rem 0;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
     justify-content: center;
   }
-
+  .nav-toggle { display: block; }
   .nav-links {
+    display: none;
     flex-direction: column;
-    gap: 0.2rem;
     align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(30,30,30,0.9);
+    padding: 1rem 2rem;
+    gap: 0.75rem;
     width: 100%;
-    padding: 0.5rem 0;
-    background: rgba(30,30,30,.9);
+    box-sizing: border-box;
   }
-
+  .nav-links.open { display: flex; }
   .nav-links a {
-    padding: 0.4rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
     width: 100%;
     text-align: center;
   }
 
-  /* Hero section adjustments */
+  /* More space under navbar before hero title */
   .hero {
     height: auto;
-    padding: 5rem 1rem 3rem;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    margin-top: 0;
   }
-
-  .hero-inner {
-    padding: 0 0.5rem;
-  }
+  .hero-inner { padding: 0 1rem; }
 
   .hero h1 {
-    font-size: clamp(2rem, 8vw, 3rem);
-    margin-bottom: 0.3rem;
-  }
-
-  .tagline {
-    font-size: 1.8rem;
+    font-size: clamp(2.5rem,8vw,4rem);
     margin-bottom: 0.5rem;
   }
-
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
-  }
-
-  /* Reduce Hero-About gap significantly */
-  :root {
-    --hero-about-gap: 2rem;
-  }
-
-  .hero-about {
-    max-width: 80%;
-    padding: 1rem;
-    border-radius: 24px;
-  }
-
-  .hero-about p {
-    font-size: 1.2rem;
-  }
-
-  /* Adjust scroll-down icon size */
-  .scroll-down svg {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-
-@media (max-width: 600px) {
-  /* Correct navbar alignment */
-  .nav-container {
-    padding: 1rem 0;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .nav-links {
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
-    align-items: center;
-  }
-
-  /* Prevent skillset (subtitle) from cutting off */
-  .subtitle {
     white-space: normal;
     overflow-wrap: break-word;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 1rem;
+  }
+  .tagline {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
-  /* Adjust the scroll-down arrow to not overlap */
+  /* “About Me” box restyled */
+  .hero-about {
+    background: rgba(255,255,255,0.85);
+    max-width: 80%;
+    padding: 1rem 1.5rem;
+    border-radius: 24px;
+    box-sizing: border-box;
+  }
+  .hero-about .section-title,
+  .hero-about p,
+  .hero-about .view-projects-link {
+    color: rgba(0,0,0,0.8);
+  }
+  .hero-about p { font-size: 1.2rem; }
+
+  /* Scroll‑down arrow repositioned */
   .scroll-down {
-    bottom: 1rem;
-    opacity: 0.75;
+    bottom: 4rem;
+    opacity: 0.8;
   }
-
-  .hero {
-    padding-bottom: 5rem; /* additional padding at bottom to create space */
+  .scroll-down svg {
+    width: 50px;
+    height: 50px;
   }
 }
