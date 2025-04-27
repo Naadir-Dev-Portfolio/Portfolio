@@ -1,110 +1,175 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naadir Duglas — Portfolio</title>
-
-  <!-- Google font & stylesheet -->
+  <title>Naadir Duglas — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ▓▓ HEADER (fixed, translucent full‑width) ▓▓ -->
   <header class="site-header">
     <nav class="nav-container">
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#books">Books</a></li>
-        <li><a href="https://sample.com" target="_blank">Science</a></li>
-        <li><a href="https://github.com/yourhandle" target="_blank">GitHub</a></li>
+        <li><a href="https://sample.com" target="_blank">W.I.P</a></li>
+        <li><a href="https://github.com/Naadir-Dev-Portfolio" target="_blank">GitHub</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ▓▓ HERO (full viewport) ▓▓ -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-inner">
       <h1>Naadir Duglas</h1>
-	<p class="tagline">Precision‑focused admin &amp; data automation so teams work smarter</p>
-   	<p class="subtitle">Automation Specialist <span class="pipe">|</span>
-   	    Data Reporting Expert <span class="pipe">|</span>
-    	    VBA/Excel & Python Developer <span class="pipe">|</span>
-    	    Power Automate & Power BI Report Builder
-  	</p>
-
-      <!-- MOVED: About Me into hero -->
+      <p class="tagline">Precision-focused admin &amp; data automation so teams work smarter</p>
+      <p class="subtitle">
+        <span>Automation Specialist</span><span class="pipe">|</span>
+        <span>Data Reporting Expert</span><span class="pipe">|</span>
+        <span>VBA/Excel & Python Developer</span><span class="pipe">|</span>
+        <span>Power Automate & Power BI Report Builder</span>
+      </p>
       <div id="about" class="hero-about">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">About Me</h2>
         <p>
-           With hands‑on experience managing developer teams and owning end‑to‑end projects, I specialize in automating administrative workflows. From custom Excel and Python applications to real‑time dashboards and AI integrations, I deliver reliable, one‑click solutions that reclaim time, uphold data accuracy, and drive operational excellence.
+          With hands-on experience managing developer teams and owning end-to-end projects, I specialize in automating administrative workflows. From custom Excel and Python applications to real-time dashboards and AI integrations, I deliver reliable, one-click solutions that reclaim time, uphold data accuracy, and drive operational excellence.
           <br><br>
-          <strong>
-            <a href="#main-content" class="view-projects-link">
-              View my projects below
-            </a>
-          </strong>
+          <strong><a href="#projects" class="view-projects-link">View my projects below</a></strong>
         </p>
       </div>
     </div>
-
-    <a href="#main-content" class="scroll-down" aria-label="Scroll to content">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-           stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="9"></circle>
-        <polyline points="8 10 12 14 16 10"></polyline>
+    <a href="#projects" class="scroll-down" aria-label="Scroll to content">
+      <svg viewBox="0 0 24 24" width="60" height="60" fill="none" stroke="currentColor"
+           stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9" />
       </svg>
     </a>
   </section>
 
-  <!-- ▓▓ MAIN CARD (hidden → slides in) ▓▓ -->
-  <main id="main-content" class="content-box hidden">
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section reveal-right section-light">
+  <main class="content-box">
+    <section id="projects" class="section section-light">
       <h2 class="section-title">Projects</h2>
-      <p class="section-text">Automations, dashboards and AI tools I’ve shipped.</p>
+      <p class="section-text">Automations, dashboards and AI tools I've shipped.</p>
 
       <ul class="tab-nav" id="proj-tabs">
-        <li data-target="python" class="active">Python</li>
-        <li data-target="powerbi">Power BI</li>
-        <li data-target="ai">AI</li>
-        <li data-target="pyqt">PyQt6 Desktop</li>
-        <li data-target="mobile">Mobile Apps</li>
-        <li data-target="misc">Misc</li>
+        <li data-target="python" class="active">Python Projects</li>
+        <li data-target="powerbi">Power BI Projects</li>
+        <li data-target="ai">AI Projects</li>
+        <li data-target="web">Web Applications</li>
       </ul>
 
-      <div class="tab-panel active" id="panel-python"><div class="projects-grid" id="grid-python"></div></div>
-      <div class="tab-panel" id="panel-powerbi"><div class="projects-grid" id="grid-powerbi"></div></div>
-      <div class="tab-panel" id="panel-ai"><div class="projects-grid" id="grid-ai"></div></div>
-      <div class="tab-panel" id="panel-pyqt"><div class="projects-grid" id="grid-pyqt"></div></div>
-      <div class="tab-panel" id="panel-mobile"><div class="projects-grid" id="grid-mobile"></div></div>
-      <div class="tab-panel" id="panel-misc"><div class="projects-grid" id="grid-misc"></div></div>
+      <div class="sub-nav-wrapper">
+        <ul class="sub-nav" id="sub-python">
+          <li data-subtarget="desktop" class="active">Desktop Applications</li>
+          <li data-subtarget="automation">Automation Pipelines</li>
+          <li data-subtarget="trading">Trading Strategies</li>
+          <li data-subtarget="quant">Quantitative Finance</li>
+        </ul>
+        <ul class="sub-nav" id="sub-powerbi">
+          <li data-subtarget="dashboards" class="active">Dashboards</li>
+          <li data-subtarget="dataflow">Dataflow &amp; Warehouse</li>
+        </ul>
+        <ul class="sub-nav" id="sub-ai">
+          <li data-subtarget="chatbots" class="active">AI Chatbots</li>
+          <li data-subtarget="prompt">Prompt Engineering</li>
+        </ul>
+        <ul class="sub-nav" id="sub-web">
+          <li data-subtarget="teamsites" class="active">Team Sites</li>
+          <li data-subtarget="tools">Tools &amp; Utilities</li>
+          <li data-subtarget="cognitive">Cognitive Exercises</li>
+        </ul>
+      </div>
 
-      <h3 class="stack-title">Tool‑stack Highlights</h3>
+      <div class="tab-panel active" id="panel-python-desktop">
+        <p class="sub-section-text">Desktop applications built with PyQt6 and Streamlit for data-driven interfaces.</p>
+        <div class="projects-grid" id="grid-python-desktop"></div>
+      </div>
+      <div class="tab-panel" id="panel-python-automation">
+        <p class="sub-section-text">Automation pipelines for ETL and workflow orchestration.</p>
+        <div class="projects-grid" id="grid-python-automation"></div>
+      </div>
+      <div class="tab-panel" id="panel-python-trading">
+        <p class="sub-section-text">Algorithmic trading strategies with live-data back-testing.</p>
+        <div class="projects-grid" id="grid-python-trading"></div>
+      </div>
+      <div class="tab-panel" id="panel-python-quant">
+        <p class="sub-section-text">Quantitative finance models for risk analysis and portfolio optimisation.</p>
+        <div class="projects-grid" id="grid-python-quant"></div>
+      </div>
+
+      <div class="tab-panel" id="panel-powerbi-dashboards">
+        <p class="sub-section-text">Power BI dashboards I've built for developmental purposes.</p>
+        <div class="projects-grid" id="grid-powerbi-dashboards"></div>
+      </div>
+      <div class="tab-panel" id="panel-powerbi-dataflow">
+        <p class="sub-section-text">Dataflow and warehouse structuring for scalable reporting.</p>
+        <div class="projects-grid" id="grid-powerbi-dataflow"></div>
+      </div>
+
+      <div class="tab-panel" id="panel-ai-chatbots">
+        <p class="sub-section-text">Conversational AI chatbots using LLMs and custom personas.</p>
+        <div class="projects-grid" id="grid-ai-chatbots"></div>
+      </div>
+      <div class="tab-panel" id="panel-ai-prompt">
+        <p class="sub-section-text">Prompt engineering work to optimise LLM outputs.</p>
+        <div class="projects-grid" id="grid-ai-prompt"></div>
+      </div>
+
+      <div class="tab-panel" id="panel-web-teamsites">
+        <p class="sub-section-text">Professional team sites built for collaboration and knowledge-sharing.</p>
+        <div class="projects-grid" id="grid-web-teamsites"></div>
+      </div>
+      <div class="tab-panel" id="panel-web-tools">
+        <p class="sub-section-text">Custom tools and utilities developed to streamline workflows.</p>
+        <div class="projects-grid" id="grid-web-tools"></div>
+      </div>
+      <div class="tab-panel" id="panel-web-cognitive">
+        <p class="sub-section-text">Interactive cognitive exercises leveraging modern web tech.</p>
+        <div class="projects-grid" id="grid-web-cognitive"></div>
+      </div>
+
+      <h3 class="stack-title">Tool-stack Highlights</h3>
       <ul class="stack-list">
-        <li>Python</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>PyQt6</li>
-        <li>Streamlit</li><li>FastAPI</li><li>OpenAI / Gemini API</li>
-        <li>Power Query</li><li>Power BI</li><li>Power Automate</li><li>VBA / Excel</li>
+        <li>Python</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li>
+        <li>PyQt6</li><li>Streamlit</li><li>FastAPI</li><li>OpenAI / Gemini API</li>
+        <li>Power Query</li><li>Power BI</li><li>Power Automate</li><li>VBA / Excel</li>
       </ul>
-    </section>
-
-    <!-- BOOKS -->
-    <section id="books" class="section reveal-left books-panel">
-      <h2 class="section-title">Books in Progress</h2>
-  	<p class="section-text">
-    	   I’m currently drafting these upcoming titles—deep dives into AI‑powered productivity, prompt engineering, and modern reporting workflows.
- 	</p>
-      <div class="books-grid" id="booksGrid"></div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <section id="books" class="section books-panel">
+    <h2 class="section-title">Books in Progress</h2>
+    <p class="section-text">
+      I'm currently drafting these upcoming titles—deep dives into AI-powered productivity, prompt engineering, and modern reporting workflows.
+    </p>
+    <div class="carousel-container">
+      <button class="carousel-button prev" aria-label="Previous book">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      <div class="carousel">
+        <div class="carousel-track">
+          <!-- Books will be dynamically inserted here -->
+        </div>
+      </div>
+      <button class="carousel-button next" aria-label="Next book">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
   <footer class="site-footer">
-    <p>Naadir Duglas  <span id="year"></span></p>
+    <p>Naadir Duglas <span id="year"></span></p>
   </footer>
 
   <script src="script.js"></script>
