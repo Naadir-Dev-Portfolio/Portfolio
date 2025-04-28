@@ -4,19 +4,43 @@
 const DATA = {
   python: {
     desktop: [
-      { title: "Financial Health Dashboard", img: "png1.png", desc: "Interactive finance KPIs with drill-down charts in PyQt6.", code: "https://github.com/yourhandle/finance-dashboard", demo: null, details: "#" },
+      { title: "Financial Dashboard", img: "financeDashboard.jpg", desc: "Interactive finance KPIs with drill-down charts in PyQt6.", code: "https://github.com/yourhandle/finance-dashboard", demo: null, details: "#" },
       { title: "Desktop AI Assistant", img: "png2.png", desc: "Gemini-powered desktop assistant & quick-launch tool.", code: "https://github.com/yourhandle/desktop-ai", demo: null, details: "#" }
     ],
-    automation: [], trading: [], quant: []
+    automation: [
+
+    ], 
+    trading: [
+
+    ], quant: [
+
+    ]
   },
   powerbi: {
     dashboards: [
       { title: "Sales KPI Dashboard", img: "png3.png", desc: "Power BI report with drill-through & RLS.", code: null, demo: null, details: "#" }
     ],
-    dataflow: []
+    dataflow: [
+
+    ]
   },
-  ai:    { chatbots: [], prompt: [] },
-  web:   { teamsites: [], tools: [ { title: "Admin Task Automator", img: "png5.png", desc: "Python scripts automating bulk data-entry jobs.", code: null, demo: null, details: "#" } ], cognitive: [] }
+  ai:    { 
+    chatbots: [
+
+    ],
+    prompt: [
+
+    ] },
+  web:   { 
+    teamsites: [
+
+    ], 
+    tools: [ 
+      { title: "Admin Task Automator", img: "png5.png", desc: "Python scripts automating bulk data-entry jobs.", code: null, demo: null, details: "#" } 
+    ], 
+    cognitive: [
+      { title: "Arithmetic Brain Training Game", img: "rainGameScreenCapture.jpg", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/maths-rain-drops/blob/main/index.html", demo: "https://mathraindropgame.netlify.app", details: null }
+    ] }
 };
 
 /* ---------- Card templates ---------- */
@@ -27,9 +51,9 @@ const card = p => `
       <h3>${p.title}</h3>
       <p>${p.desc}</p>
       <div class="card-links">
-        ${p.demo?`<a href="${p.demo}" target="_blank">Live</a>`:""}
-        ${p.code?`<a href="${p.code}" target="_blank">Code</a>`:""}
-        <a href="${p.details}" target="_blank">Details →</a>
+        ${p.demo ? `<a href="${p.demo}" target="_blank">Live</a>` : ""}
+        ${p.code ? `<a href="${p.code}" target="_blank">Code</a>` : ""}
+        ${p.details ? `<a href="${p.details}" target="_blank">Details →</a>` : ""}
       </div>
     </div>
   </div>`;
@@ -308,7 +332,7 @@ const obs = new IntersectionObserver((entries,o)=>{
     }
   });
 },{threshold:0.18});
-document.querySelectorAll(".reveal-left, .reveal-right")
+document.querySelectorAll(".reveal-left, .reveal-right, .reveal-fade, .about-fade")
   .forEach(el=>obs.observe(el));
 
 /* ---------- Year & hamburger ---------- */
@@ -330,3 +354,32 @@ navLinks.querySelectorAll("a").forEach(a=>
     }
   })
 );
+
+// Typewriter effect for headline
+const typewriterText = "Naadir Duglas";
+const typewriterElement = document.getElementById("typewriter");
+const cursorElement = document.querySelector(".typewriter-cursor");
+let typeIndex = 0;
+
+function typeWriter() {
+  if (typeIndex <= typewriterText.length) {
+    typewriterElement.textContent = typewriterText.slice(0, typeIndex);
+    typeIndex++;
+    setTimeout(typeWriter, 120); // typing speed
+  }
+}
+typeWriter();
+
+// Typewriter effect for About Me description
+const aboutText = "With hands-on experience managing developer teams and owning end-to-end projects, I specialize in automating administrative workflows. From custom Excel and Python applications to real-time dashboards and AI integrations, I deliver reliable, one-click solutions that reclaim time, uphold data accuracy, and drive operational excellence.";
+const aboutTypewriter = document.getElementById("about-typewriter");
+let aboutIndex = 0;
+
+function typeAbout() {
+  if (aboutIndex <= aboutText.length) {
+    aboutTypewriter.textContent = aboutText.slice(0, aboutIndex);
+    aboutIndex++;
+    setTimeout(typeAbout, 18); // Adjust speed as desired
+  }
+}
+typeAbout();
