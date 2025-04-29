@@ -40,7 +40,7 @@ const DATA = {
     ], 
     cognitive: [
       { title: "Arithmetic Brain Training Game", img: "rainGameScreenCapture.jpg", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/maths-rain-drops/blob/main/index.html", demo: "mathraindrops-by-naadir.netlify.app", details: null },
-      { title: "Hexamatch Fractions Game", img: "hexamatchScreenCapture.jpg", desc: "I built this game to provide an engaging, hands-on way for beginners to develop intuitive understanding of fractions by matching hexagon values to a target before time runs out. ", code: "https://github.com/Naadir-Dev-Portfolio/HexamatchFractions/blob/main/hexamatch.html", demo: "hexamatch-by-naadir.netlify.app", details: null }
+      { title: "Hexamatch Fractions Game", img: "hexamatchScreenCapture.jpg", desc: "I built this game to provide an engaging, hands-on way for beginners to develop intuitive understanding of fractions.", code: "https://github.com/Naadir-Dev-Portfolio/HexamatchFractions/blob/main/hexamatch.html", demo: "hexamatch-by-naadir.netlify.app", details: null }
     ] }
 };
 
