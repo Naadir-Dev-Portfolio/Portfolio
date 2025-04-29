@@ -39,7 +39,7 @@ const DATA = {
       { title: "Admin Task Automator", img: "png5.png", desc: "Python scripts automating bulk data-entry jobs.", code: null, demo: null, details: "#" } 
     ], 
     cognitive: [
-      { title: "Arithmetic Brain Training Game", img: "rainGameScreenCapture.jpg", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/maths-rain-drops/blob/main/index.html", demo: "https://mathraindropgame.netlify.app", details: null }
+      { title: "Arithmetic Brain Training Game", img: "rainGameScreenCapture.jpg", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/maths-rain-drops/blob/main/index.html", demo: "mathraindrops-by-naadir.netlify.app", details: null }
     ] }
 };
 
