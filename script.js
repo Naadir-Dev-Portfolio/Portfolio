@@ -41,7 +41,8 @@ const DATA = {
     cognitive: [
       { title: "RainD Drops Arithmatics Game", img: "raindropsScreen.jpg", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-RainDrops/blob/main/index.html", demo: "https://app.netlify.com/sites/raindrops-by-naadir/overview", details: null },
       { title: "Hexamatch Fractions Game", img: "hexamatchScreen.jpg", desc: "I built this game to provide an engaging, way to develop intuitive understanding of fractions.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Hexamatch/blob/main/index.html", demo: "https://app.netlify.com/sites/hexamatch-by-naadir/overview", details: null },
-      { title: "AlgebraVerse Algebra Game", img: "algebraverseScreen.jpg", desc: "I built this game to provide a progressive series of algebra challenges with hints and feedback.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Algebraverse/blob/main/index.html", demo: "https://algebraverse-by-naadir.netlify.app/", details: null }
+      { title: "AlgebraVerse Algebra Game", img: "algebraverseScreen.jpg", desc: "Progressive algebra challenges—I built it to teach with hints and feedback.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Algebraverse/blob/main/index.html", demo: "https://algebraverse-by-naadir.netlify.app/", details: null },
+      { title: "AlgebraVerse Algebra Game", img: "algebraverseScreen.jpg", desc: "This game visualizes logic gates—I built it to make Boolean reasoning engaging.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-LogicGrid/blob/main/index.html", demo: "https://logicgrid-by-naadir.netlify.app/", details: null }
     ] }
 };
 
