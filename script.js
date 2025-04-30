@@ -39,8 +39,9 @@ const DATA = {
       { title: "Admin Task Automator", img: "png5.png", desc: "Python scripts automating bulk data-entry jobs.", code: null, demo: null, details: "#" } 
     ], 
     cognitive: [
-      { title: "Arithmetic Brain Training Game", img: "rainGameScreenCapture.jpg", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-RainDrops/blob/main/index.html", demo: "raindrops-by-naadir.netlify.app", details: null },
-      { title: "Hexamatch Fractions Game", img: "hexamatchScreenCapture.jpg", desc: "I built this game to provide an engaging, hands-on way for beginners to develop intuitive understanding of fractions.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Hexamatch/blob/main/index.html", demo: "hexamatch-by-naadir.netlify.app", details: null }
+      { title: "RainD Drops Arithmatics Game", img: "raindropsScreen.jpg", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-RainDrops/blob/main/index.html", demo: "https://app.netlify.com/sites/raindrops-by-naadir/overview", details: null },
+      { title: "Hexamatch Fractions Game", img: "hexamatchScreen.jpg", desc: "I built this game to provide an engaging, hands-on way for beginners to develop intuitive understanding of fractions.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Hexamatch/blob/main/index.html", demo: "https://app.netlify.com/sites/hexamatch-by-naadir/overview", details: null },
+      { title: "AlgebraVerse Algebra Game", img: "algebraverseScreen.jpg", desc: "I built this game to provide a playful, progressive series of algebra challenges with instant hints and feedback.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Algebraverse/blob/main/index.html", demo: "https://algebraverse-by-naadir.netlify.app/", details: null }
     ] }
 };
 
