@@ -8,7 +8,8 @@ const DATA = {
       { title: "Desktop AI Assistant", img: "png2.png", desc: "Gemini-powered desktop assistant & quick-launch tool.", code: "https://github.com/yourhandle/desktop-ai", demo: null, details: "#" }
     ],
     automation: [
-
+      {
+        title:  "Python / ExtendScript Export Pipeline", videoId:"JtVEtAiz0UU", desc:   "Fully Automated Illustrator Export Pipeline with Python", code: "https://github.com/Naadir-Dev-Portfolio/Automation-Illustrator-Export-Pipeline/blob/main/main.py", demo: null, details:null }
     ], 
     trading: [
 
@@ -47,20 +48,43 @@ const DATA = {
 };
 
 /* ---------- Card templates ---------- */
-const card = p => `
-  <div class="card">
-    <img src="images/${p.img}" alt="${p.title}">
-    <div class="card-body">
-      <h3>${p.title}</h3>
-      <p>${p.desc}</p>
-      <div class="card-links">
-        ${p.demo ? `<a href="${p.demo}" target="_blank">Live</a>` : ""}
-        ${p.code ? `<a href="${p.code}" target="_blank">Code</a>` : ""}
-        ${p.details ? `<a href="${p.details}" target="_blank">Details →</a>` : ""}
-      </div>
-    </div>
-  </div>`;
+const card = p => {
+  // If this project has a YouTube ID, show thumbnail + play button
+  if (p.videoId) {
+    const thumb = `https://img.youtube.com/vi/${p.videoId}/hqdefault.jpg`;
+    return `
+      <div class="card video-card" data-video-id="${p.videoId}">
+        <div class="video-thumb">
+          <img src="${thumb}" alt="${p.title}">
+          <div class="play-overlay"></div>
+        </div>
+        <div class="card-body">
+          <h3>${p.title}</h3>
+          <p>${p.desc || ""}</p>
+          <div class="card-links">
+            ${p.demo    ? `<a href="${p.demo}"    target="_blank">Live</a>`    : ""}
+            ${p.code    ? `<a href="${p.code}"    target="_blank">Code</a>`    : ""}
+            ${p.details ? `<a href="${p.details}" target="_blank">Details →</a>` : ""}
+          </div>
+        </div>
+      </div>`;
+  }
 
+  // Fallback for normal image-only cards
+  return `
+    <div class="card">
+      <img src="images/${p.img}" alt="${p.title}">
+      <div class="card-body">
+        <h3>${p.title}</h3>
+        <p>${p.desc || ""}</p>
+        <div class="card-links">
+          ${p.demo    ? `<a href="${p.demo}"    target="_blank">Live</a>`    : ""}
+          ${p.code    ? `<a href="${p.code}"    target="_blank">Code</a>`    : ""}
+          ${p.details ? `<a href="${p.details}" target="_blank">Details →</a>` : ""}
+        </div>
+      </div>
+    </div>`;
+};
 /* ---------- Placeholder ---------- */
 const placeholderCard = `
   <div class="card placeholder-card">
@@ -358,31 +382,24 @@ navLinks.querySelectorAll("a").forEach(a=>
   })
 );
 
-// Typewriter effect for headline
-const typewriterText = "Naadir Duglas";
-const typewriterElement = document.getElementById("typewriter");
-const cursorElement = document.querySelector(".typewriter-cursor");
-let typeIndex = 0;
 
-function typeWriter() {
-  if (typeIndex <= typewriterText.length) {
-    typewriterElement.textContent = typewriterText.slice(0, typeIndex);
-    typeIndex++;
-    setTimeout(typeWriter, 120); // typing speed
-  }
-}
-typeWriter();
-
-// Typewriter effect for About Me description
-const aboutText = "With hands-on experience managing developer teams and owning end-to-end projects, I specialize in automating administrative workflows. From custom Excel and Python applications to real-time dashboards and AI integrations, I deliver reliable, one-click solutions that reclaim time, uphold data accuracy, and drive operational excellence.";
-const aboutTypewriter = document.getElementById("about-typewriter");
-let aboutIndex = 0;
-
-function typeAbout() {
-  if (aboutIndex <= aboutText.length) {
-    aboutTypewriter.textContent = aboutText.slice(0, aboutIndex);
-    aboutIndex++;
-    setTimeout(typeAbout, 18); // Adjust speed as desired
-  }
-}
-typeAbout();
+// ——— Play YouTube in-place when you click the thumbnail ———
+document.querySelectorAll(".video-card").forEach(cardEl => {
+  cardEl.addEventListener("click", () => {
+    const id = cardEl.dataset.videoId;
+    // build the iframe + body
+    cardEl.innerHTML = `
+      <iframe
+        width="100%"
+        height="180"
+        src="https://www.youtube.com/embed/${id}?autoplay=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+      <div class="card-body">
+        ${cardEl.querySelector(".card-body").innerHTML}
+      </div>
+    `;
+  });
+});
