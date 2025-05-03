@@ -34,7 +34,7 @@ const DATA = {
     ] },
   web:   { 
     teamsites: [
-      { title: "CCMI Team Website", img: "demoscreen.webp", desc: "A front-end site I built to showcase the design and functionality for a data team.", code: "https://github.com/Naadir-Dev-Portfolio/Website-ccmi-team-site/tree/main", demo: "https://ccmiteamsite-by-naadir.netlify.app/", details: null } 
+      { title: "CCMI Team Website", img: "demoscreen.webp", desc: "A front-end site I built to showcase the design and functionality for a professional data team.", code: "https://github.com/Naadir-Dev-Portfolio/Website-ccmi-team-site/tree/main", demo: "https://ccmiteamsite-by-naadir.netlify.app/", details: null } 
 
     ], 
     tools: [ 
