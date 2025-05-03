@@ -155,8 +155,18 @@ document.querySelectorAll(".sub-nav").forEach(menu=>{
 });
 
 /* ---------- Initial state ---------- */
-showPanel("python","desktop");
-toggleSlide(document.getElementById("sub-python"), true);
+const defaultCat = "ai";
+const defaultSub = "chatbots";
+
+document.querySelectorAll("#proj-tabs li").forEach(li => {
+  li.classList.toggle("active", li.dataset.target === defaultCat);
+});
+document.querySelectorAll(`#sub-${defaultCat} li`).forEach(li => {
+  li.classList.toggle("active", li.dataset.subtarget === defaultSub);
+});
+
+showPanel(defaultCat, defaultSub);
+toggleSlide(document.getElementById(`sub-${defaultCat}`), true);
 
 /* ---------- Books Carousel ---------- */
 const BOOKS = [

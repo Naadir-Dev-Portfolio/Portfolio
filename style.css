@@ -92,7 +92,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .subtitle {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin: 1rem 0 2rem;
   text-align: center;
@@ -133,7 +133,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.01em;
 }
 .hero-about .view-projects-link {
-  color: #111; text-decoration: underline; font-weight: 500;
+  color: #111; text-decoration: underline; font-weight: 700; font-size: 1.15rem;
 }
 
 /* ===== Chevron ===== */
@@ -175,7 +175,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-bottom: 1rem; color: var(--txt-dark);
 }
 .books-panel .section-title { color: #fff; }
-.section-text { text-align: center; font-size: 1rem; margin-bottom: 1.8rem; color: #555; }
+.section-text { text-align: center; font-size: 1.2rem; margin-bottom: 1.8rem; color: #555; }
 
 /* ===== Tabs ===== */
 .tab-nav {
@@ -236,7 +236,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 .sub-section-text {
-  text-align: center; font-size: 1rem; margin: .4rem auto 1.2rem;
+  text-align: center; font-size: 1.15rem; margin: .4rem auto 2rem;
   max-width: 800px; color: #555;
 }
 
@@ -272,10 +272,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   flex: 1 1 auto; display: flex; flex-direction: column; padding: 1rem;
 }
 .card h3 {
-  font-size: 1.25rem; font-weight: 600; margin-bottom: .4rem;
+  font-size: 1.1rem; font-weight: 600; margin-bottom: .4rem;
   color: var(--txt-dark);
 }
-.card p { font-size: .92rem; margin-bottom: .8rem; color: #444; }
+.card p { font-size: 0.95rem; margin-bottom: .8rem; color: #444; }
 .card-links { margin-top: auto; }
 .card-links a {
   display: inline-block; background: #374957; color: #fff;
@@ -335,7 +335,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 #books .section-text {
   color: #ddd;
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 /* ===== Footer ===== */
