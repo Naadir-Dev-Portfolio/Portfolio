@@ -27,7 +27,7 @@ const DATA = {
   },
   ai:    { 
     chatbots: [
-      { title: "CCMI Gen AI Chatbot", img: "ccmiChatbot_demo.webp", desc: "I leveraged the Gemini 1.5 flash model to build my own custom ChatGPT for my team.", code: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai", demo: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai/blob/main/main.py", details: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai/blob/main/README.md" } 
+      { title: "CCMI Gen AI Chatbot", img: "ccmiChatbot_demo.webp", desc: "I leveraged the Gemini 1.5 flash model to build my own custom ChatGPT for my team.", code: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai/blob/main/main.py", demo: "https://ccmi-genai-chat.streamlit.app/", details: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai/blob/main/README.md" } 
 
     ],
     prompt: [
