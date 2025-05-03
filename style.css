@@ -719,5 +719,5 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* On hover of the whole card, bump opacity and (optionally) scale */
 .video-card:hover .play-overlay {
   opacity: 1;                 /* fade in fully */
-  transform: translate(-50%, -50%) scale(1.2);  /* grow slightly */
+  transform: translate(-50%, -50%) scale(1.1);  /* grow slightly */
 }
