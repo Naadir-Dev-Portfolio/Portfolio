@@ -1,5 +1,5 @@
 // script.js
-/*-- Local Git Activated */
+
 /* ---------- DATA ---------- */
 const DATA = {
   python: {
