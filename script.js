@@ -39,7 +39,7 @@ const DATA = {
 
     ], 
     tools: [ 
-      { title: "Admin Task Automator", img: "png5.png", desc: "Python scripts automating bulk data-entry jobs.", code: null, demo: null, details: "#" } 
+      
     ], 
     cognitive: [
       { title: "Rain Drops Arithmetics Game", img: "raindropsScreen.webp", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-RainDrops/blob/main/index.html", demo: "https://raindrops-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-RainDrops/blob/main/README.md" },
