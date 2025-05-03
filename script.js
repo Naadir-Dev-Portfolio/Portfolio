@@ -27,6 +27,7 @@ const DATA = {
   },
   ai:    { 
     chatbots: [
+      { title: "CCMI Team Website", img: "ccmiChatbot_demo.webp", desc: "I leveraged the Gemini 1.5 flash model to build my own custom ChatGPT for my team", code: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai", demo: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai", details: null } 
 
     ],
     prompt: [
@@ -34,7 +35,7 @@ const DATA = {
     ] },
   web:   { 
     teamsites: [
-      { title: "CCMI Team Website", img: "demoscreen.webp", desc: "A front-end site I built to showcase the design and functionality for a professional data team.", code: "https://github.com/Naadir-Dev-Portfolio/Website-ccmi-team-site/tree/main", demo: "https://ccmiteamsite-by-naadir.netlify.app/", details: null } 
+      { title: "CCMI Team Website", img: "ccmisite_demo.webp", desc: "A front-end site I built to showcase the design and functionality for a professional data team.", code: "https://github.com/Naadir-Dev-Portfolio/Website-ccmi-team-site/tree/main", demo: "https://ccmiteamsite-by-naadir.netlify.app/", details: null } 
 
     ], 
     tools: [ 
