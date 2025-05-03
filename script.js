@@ -4,11 +4,12 @@
 const DATA = {
   python: {
     desktop: [
-      { title: "Financial Dashboard", img: "financeDashboard.jpg", desc: "Interactive finance KPIs with drill-down charts in PyQt6.", code: "https://github.com/yourhandle/finance-dashboard", demo: null, details: "#" }
+      { title: "Financial Dashboard", img: "financeDashboard.jpg", desc: "Interactive finance KPIs with drill-down charts in PyQt6.", code: "https://github.com/yourhandle/finance-dashboard", demo: null, details: "#" },
+      { title: "Youtube View Stats", img: "yt_viewCountScreen.webp", desc: "I created a cross‑platform PyQt6 dashboard integrating the YouTube Data API to visualize channel view‑count trend.", code: "https://github.com/Naadir-Dev-Portfolio/Desktop-youtube-view-stats-dashboard/blob/main/main.py", demo: null, details: "https://github.com/Naadir-Dev-Portfolio/Desktop-youtube-view-stats-dashboard/blob/main/README.md" }
     ],
     automation: [
       {
-        title:  "Python / ExtendScript Export Pipeline", videoId:"JtVEtAiz0UU", desc:   "Fully Automated Illustrator Export Pipeline with Python", code: "https://github.com/Naadir-Dev-Portfolio/Automation-Illustrator-Export-Pipeline/blob/main/main.py", demo: null, details:null }
+        title:  "Python / ExtendScript Export Pipeline", videoId:"JtVEtAiz0UU", desc:   "Fully Automated Illustrator Export Pipeline with Python", code: "https://github.com/Naadir-Dev-Portfolio/Automation-Illustrator-Export-Pipeline/blob/main/main.py", demo: null, details: "https://github.com/Naadir-Dev-Portfolio/Automation-Illustrator-Export-Pipeline/blob/main/README.md" }
     ], 
     trading: [
 
@@ -26,7 +27,7 @@ const DATA = {
   },
   ai:    { 
     chatbots: [
-      { title: "CCMI Gen AI Chatbot", img: "ccmiChatbot_demo.webp", desc: "I leveraged the Gemini 1.5 flash model to build my own custom ChatGPT for my team.", code: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai", demo: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai", details: null } 
+      { title: "CCMI Gen AI Chatbot", img: "ccmiChatbot_demo.webp", desc: "I leveraged the Gemini 1.5 flash model to build my own custom ChatGPT for my team.", code: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai", demo: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai/blob/main/main.py", details: "https://github.com/Naadir-Dev-Portfolio/chatbot-ccmi-genai/blob/main/README.md" } 
 
     ],
     prompt: [
@@ -34,17 +35,17 @@ const DATA = {
     ] },
   web:   { 
     teamsites: [
-      { title: "CCMI Team Website", img: "ccmisite_demo.webp", desc: "A front-end site I built to showcase the design and functionality for a professional data team.", code: "https://github.com/Naadir-Dev-Portfolio/Website-ccmi-team-site/tree/main", demo: "https://ccmiteamsite-by-naadir.netlify.app/", details: null } 
+      { title: "CCMI Team Website", img: "ccmisite_demo.webp", desc: "A front-end site I built to showcase the design and functionality for a professional data team.", code: "https://github.com/Naadir-Dev-Portfolio/Website-ccmi-team-site/tree/main", demo: "https://ccmiteamsite-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/Website-ccmi-team-site/blob/main/README.md" } 
 
     ], 
     tools: [ 
       { title: "Admin Task Automator", img: "png5.png", desc: "Python scripts automating bulk data-entry jobs.", code: null, demo: null, details: "#" } 
     ], 
     cognitive: [
-      { title: "Rain Drops Arithmetics Game", img: "raindropsScreen.webp", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-RainDrops/blob/main/index.html", demo: "https://raindrops-by-naadir.netlify.app/", details: null },
-      { title: "Hexamatch Fractions Game", img: "hexamatchScreen.webp", desc: "I built this game to provide an engaging, way to develop intuitive understanding of fractions.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Hexamatch/blob/main/index.html", demo: "https://hexamatch-by-naadir.netlify.app/", details: null },
-      { title: "AlgebraVerse Algebra Game", img: "algebraverseScreen.webp", desc: "Progressive algebra challenges, I created this to relearn algebra.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Algebraverse/blob/main/index.html", demo: "https://algebraverse-by-naadir.netlify.app/", details: null },
-      { title: "Logic Grid Boolean Game", img: "logicgridscreen.webp", desc: "This game visualizes logic gates, I created it to improve Boolean reasoning.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-LogicGrid/blob/main/index.html", demo: "https://logicgrid-by-naadir.netlify.app/", details: null }
+      { title: "Rain Drops Arithmetics Game", img: "raindropsScreen.webp", desc: "Rain Drops in Lumosity was my most favourite brain training game, So I built a replica. ", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-RainDrops/blob/main/index.html", demo: "https://raindrops-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-RainDrops/blob/main/README.md" },
+      { title: "Hexamatch Fractions Game", img: "hexamatchScreen.webp", desc: "I built this game to provide an engaging, way to develop intuitive understanding of fractions.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Hexamatch/blob/main/index.html", demo: "https://hexamatch-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Hexamatch/blob/main/README.md" },
+      { title: "AlgebraVerse Algebra Game", img: "algebraverseScreen.webp", desc: "Progressive algebra challenges, I created this to relearn algebra.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Algebraverse/blob/main/index.html", demo: "https://algebraverse-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Algebraverse/blob/main/README.md" },
+      { title: "Logic Grid Boolean Game", img: "logicgridscreen.webp", desc: "This game visualizes logic gates, I created it to improve Boolean reasoning.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-LogicGrid/blob/main/index.html", demo: "https://logicgrid-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-LogicGrid/blob/main/README.md" }
     ] }
 };
 
