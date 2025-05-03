@@ -4,8 +4,7 @@
 const DATA = {
   python: {
     desktop: [
-      { title: "Financial Dashboard", img: "financeDashboard.jpg", desc: "Interactive finance KPIs with drill-down charts in PyQt6.", code: "https://github.com/yourhandle/finance-dashboard", demo: null, details: "#" },
-      { title: "Desktop AI Assistant", img: "png2.png", desc: "Gemini-powered desktop assistant & quick-launch tool.", code: "https://github.com/yourhandle/desktop-ai", demo: null, details: "#" }
+      { title: "Financial Dashboard", img: "financeDashboard.jpg", desc: "Interactive finance KPIs with drill-down charts in PyQt6.", code: "https://github.com/yourhandle/finance-dashboard", demo: null, details: "#" }
     ],
     automation: [
       {
@@ -19,7 +18,7 @@ const DATA = {
   },
   powerbi: {
     dashboards: [
-      { title: "Sales KPI Dashboard", img: "png3.png", desc: "Power BI report with drill-through & RLS.", code: null, demo: null, details: "#" }
+      
     ],
     dataflow: [
 
