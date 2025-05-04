@@ -26,7 +26,7 @@ const DATA = {
     ]
   },
   ai:    { 
-    chatbots: [
+    generativeai: [
       { title: "CCMI Gen AI Chatbot", img: "ccmiChatbot_demo.webp", desc: "I leveraged the Gemini 1.5 flash model to build my own custom ChatGPT for my team.", code: "https://github.com/Naadir-Dev-Portfolio/Streamlit-ccmi-genai/blob/main/main.py", demo: "https://ccmi-genai-chat.streamlit.app/", details: "https://github.com/Naadir-Dev-Portfolio/Streamlit-ccmi-genai/blob/main/README.md" },
       { title: "AI Quiz Bot", img: "aiQuizbot.webp", desc: "Engineered AI Quiz Bot with Google Gemini 1.5-Flash for interactive learning.", code: "https://github.com/Naadir-Dev-Portfolio/Streamlit-AIQuizbot/blob/main/main.py", demo: "https://aiquizbot.streamlit.app/", details: "https://github.com/Naadir-Dev-Portfolio/Streamlit-AIQuizbot/blob/main/README.md" }
     ],
@@ -156,7 +156,7 @@ document.querySelectorAll(".sub-nav").forEach(menu=>{
 
 /* ---------- Initial state ---------- */
 const defaultCat = "ai";
-const defaultSub = "chatbots";
+const defaultSub = "generativeai";
 
 document.querySelectorAll("#proj-tabs li").forEach(li => {
   li.classList.toggle("active", li.dataset.target === defaultCat);
