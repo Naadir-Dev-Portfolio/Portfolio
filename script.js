@@ -4,8 +4,9 @@
 const DATA = {
   python: {
     desktop: [
-      { title: "Financial Dashboard", img: "financeDashboard.jpg", desc: "Interactive finance KPIs with drill-down charts in PyQt6.", code: "https://github.com/yourhandle/finance-dashboard", demo: null, details: "#" },
-      { title: "Youtube View Stats", img: "yt_viewCountScreen.webp", desc: "I created a cross‑platform PyQt6 dashboard integrating the YouTube Data API to visualize channel view‑count trend.", code: "https://github.com/Naadir-Dev-Portfolio/Desktop-youtube-view-stats-dashboard/blob/main/main.py", demo: null, details: "https://github.com/Naadir-Dev-Portfolio/Desktop-youtube-view-stats-dashboard/blob/main/README.md" }
+      { title: "Financial Dashboard", img: "FinanceScreen.png", desc: "I developed an Interactive finance KPIs dashboard with automated data importing using the PyQt Framework for Python.", code: "https://github.com/Naadir-Dev-Portfolio/Desktop-PyQt6-finance-dashboard/blob/main/Ui_finance.py", demo: null, details: "https://github.com/Naadir-Dev-Portfolio/Desktop-PyQt6-finance-dashboard/blob/main/README.md" },
+      { title: "Youtube View Stats", img: "yt_viewCountScreen.webp", desc: "I created a cross‑platform PyQt6 dashboard integrating the YouTube Data API to visualize channel view‑count trend.", code: "https://github.com/Naadir-Dev-Portfolio/Desktop-youtube-view-stats-dashboard/blob/main/main.py", demo: null, details: "https://github.com/Naadir-Dev-Portfolio/Desktop-youtube-view-stats-dashboard/blob/main/README.md" },
+       { title: "Health Dashboard", img: "healthDashboardScreen.png", desc: "A Project where I've utilized OpenGL within a PyQt Health Dashboard for dynamic 3D model selectioand dynamic metrics.", code: "https://github.com/Naadir-Dev-Portfolio/Desktop-PyQt6-health-dashboard/blob/main/Ui_health.py", demo: null, details: "https://github.com/Naadir-Dev-Portfolio/Desktop-PyQt6-health-dashboard/blob/main/README.md" }
     ],
     automation: [
       {
@@ -155,8 +156,8 @@ document.querySelectorAll(".sub-nav").forEach(menu=>{
 });
 
 /* ---------- Initial state ---------- */
-const defaultCat = "ai";
-const defaultSub = "generativeai";
+const defaultCat = "python";
+const defaultSub = "desktop";
 
 document.querySelectorAll("#proj-tabs li").forEach(li => {
   li.classList.toggle("active", li.dataset.target === defaultCat);
