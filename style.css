@@ -298,10 +298,37 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: flex; flex-wrap: wrap; gap: .55rem; justify-content: center;
 }
 .stack-list li {
-  background: #e5e5e5; padding: .35rem .9rem; border-radius: 5px;
-  font-size: .75rem; font-weight: 600; color: #333;
+  background: #f0f0f0; /* lighter background for better readability */
+  padding: .5rem 1rem; /* slightly larger padding */
+  border-radius: 20px; /* more rounded oval shape */
+  font-size: 0.85rem; /* slightly larger font size */
+  font-weight: 600; 
+  color: #222; /* darker text for better contrast */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.stack-list li:hover {
+  background-color: #dcdcdc; /* subtle hover effect */
+  color: #000;
 }
 
+.diamond-divider {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.diamond {
+  width: 20px;
+  height: 20px;
+  background-color: #999;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.diamond:hover {
+  opacity: 0.6;
+  background-color: #999;
+}
 /* ===== Books ===== */
 .books-grid {
   display: grid;
