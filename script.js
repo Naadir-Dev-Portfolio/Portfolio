@@ -48,7 +48,21 @@ const DATA = {
       { title: "Hexamatch Fractions Game", img: "hexamatchScreen.webp", desc: "I built this game to provide an engaging, way to develop intuitive understanding of fractions.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Hexamatch/blob/main/index.html", demo: "https://hexamatch-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Hexamatch/blob/main/README.md" },
       { title: "AlgebraVerse Algebra Game", img: "algebraverseScreen.webp", desc: "Progressive algebra challenges, I created this to relearn algebra.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Algebraverse/blob/main/index.html", demo: "https://algebraverse-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-Algebraverse/blob/main/README.md" },
       { title: "Logic Grid Boolean Game", img: "logicgridscreen.webp", desc: "This game visualizes logic gates, I created it to improve Boolean reasoning.", code: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-LogicGrid/blob/main/index.html", demo: "https://logicgrid-by-naadir.netlify.app/", details: "https://github.com/Naadir-Dev-Portfolio/HTML5-Game-LogicGrid/blob/main/README.md" }
-    ] }
+    ] },
+  office365: {
+    "vba-macros": [
+      // Placeholder project example
+     
+    ],
+    "power-automate": [
+     
+    ]
+  },
+  browserextensions: {
+    "google-chrome": [
+      
+    ]
+  }
 };
 
 /* ---------- Card templates ---------- */
