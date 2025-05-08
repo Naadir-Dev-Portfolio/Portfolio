@@ -52,6 +52,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   min-height: 85vh; padding-top: var(--header-h); padding-bottom: 3rem;
   overflow: hidden;
 }
+
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,0)),
@@ -112,7 +113,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: 1.5rem;
   border-radius: 38px;
   display: inline-block;
-  max-width: 90%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 0 2px 12px rgba(0,0,0,.08);
   color: #111;
   backdrop-filter: blur(4px);
@@ -391,7 +394,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 @media(max-width:600px) {
-  .nav-container { padding: 1rem 0; justify-content: center; }
+  .nav-container { padding: 1rem 1rem; justify-content: center; max-width: 100%; }
   .nav-links {
     flex-direction: column; gap: .2rem; align-items: center;
     width: 100%; padding: .5rem 0; background: rgba(30,30,30,.95);
@@ -400,8 +403,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav-links.show { display: flex; }
   .nav-links a { padding: .4rem; width: 100%; text-align: center; }
 
-  .hero { padding-top: var(--header-h); }
-  .hero-inner { padding: 0 .5rem; }
+  .hero { padding-top: var(--header-h); padding-left: 1rem; padding-right: 1rem; }
+  .hero-inner { padding: 0; }
   .hero h1 { font-size: clamp(2rem,8vw,3rem); margin: 1.2rem 0 1rem; }
   .tagline { font-size: 1.1rem; margin: 1rem 0; padding: 0 .2rem; }
   .subtitle { font-size: 1.1rem; margin: 1.2rem 0; flex-direction: column; gap: 0; }
@@ -645,6 +648,29 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Responsive tweaks */
+@media(max-width:950px) {
+  .hero-inner {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box;
+  }
+  .hero {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box;
+  }
+  .hero-about {
+    box-sizing: border-box;
+  }
+  .tagline {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box;
+  }
+}
 @media(max-width:900px) {
   .book-card {
     flex: 0 0 250px;
