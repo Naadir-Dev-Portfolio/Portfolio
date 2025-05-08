@@ -727,6 +727,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
 }
 
+.lottie-background {
+  display: flex;
+  justify-content: center;
+  margin-top: -140px;
+  margin-bottom: -70px;
+}
+
 
 .about-fade {
   opacity: 0;
@@ -773,4 +780,22 @@ ul { margin: 0; padding: 0; list-style: none; }
 .video-card:hover .play-overlay {
   opacity: 1;                 /* fade in fully */
   transform: translate(-50%, -50%) scale(1.1);  /* grow slightly */
+}
+
+/* ——— Nav-link icons ——— */
+.icon {
+  width: 1.4em;               /* increase size */
+  height: 1.4em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  vector-effect: non-scaling-stroke;
+}
+/* Nav-links: no underline & larger text */
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.2rem;   /* adjust this value as needed */
+}
+
+.nav-links a:hover {
+  text-decoration: none;
 }
