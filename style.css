@@ -373,6 +373,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-align: center; padding: 1rem 0 2rem; font-size: .9rem; color: #999;
 }
 
+.section-divider {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
 /* ===== Hamburger & Mobile tweaks ===== */
 .nav-toggle {
   display: none; flex-direction: column; justify-content: center;
@@ -731,9 +738,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: flex;
   justify-content: center;
   margin-top: -140px;
-  margin-bottom: -70px;
+  margin-bottom: -100px;
 }
-
 
 .about-fade {
   opacity: 0;
@@ -798,4 +804,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .nav-links a:hover {
   text-decoration: none;
+}
+
+
+#projects {
+  padding-top: 0.8rem;
+}
+
+.section-title {
+  margin-top: 0.4rem;
 }
