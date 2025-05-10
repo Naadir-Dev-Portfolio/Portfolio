@@ -459,10 +459,7 @@ function expandAIAssistant() {
 document.addEventListener('DOMContentLoaded', () => {
   const viewProjectsLink = document.getElementById('view-projects-link');
   if (viewProjectsLink) {
-    viewProjectsLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      smoothScrollToId('projects');
-    });
+    // Remove any event listener to allow default anchor behavior
   }
 
   function scrollToAndExpandAI() {
@@ -516,13 +513,7 @@ function expandAIAssistant() {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Event listener for "View my projects below" link
-  const viewProjectsLink = document.getElementById('view-projects-link');
-  if (viewProjectsLink) {
-    viewProjectsLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      smoothScrollToId('projects');
-    });
-  }
+  // Removed custom smooth scroll to allow default anchor behavior
 
   function scrollToAndExpandAI() {
     smoothScrollToId('naadirs-ai-assistant-container', -100);

@@ -57,6 +57,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: absolute; inset: 0;
   background: linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,0)),
               url(images/background.png) center/cover no-repeat;
+  pointer-events: none;
 }
 .hero-inner {
   position: relative; z-index: 1; width: 100%; max-width: 900px;
@@ -739,6 +740,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   justify-content: center;
   margin-top: -140px;
   margin-bottom: -100px;
+  opacity: 0.2; /* Make Lottie animation semi-transparent */
 }
 
 .about-fade {
@@ -809,6 +811,22 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 #projects {
   padding-top: 0.8rem;
+}
+
+.hero-about a.view-projects-link {
+  text-decoration: underline;
+  color: #003366;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+#view-ai-assistant-link {
+  text-decoration: underline;
+  color: #003366;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 .section-title {
