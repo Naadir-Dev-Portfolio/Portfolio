@@ -1,0 +1,294 @@
+/* gemini-ai-style.css */
+
+body.dark-theme-test-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+    font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #e0e0e0;
+}
+
+#naadirs-ai-assistant-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Increased width from 480px to 600px */
+    margin: 40px auto 20px auto; /* Increased top margin to lower container for vertical centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#naadirs-ai-assistant-container.expanded::before {
+    content: '';
+    position: absolute;
+    top: 25px; /* Adjusted for new smaller toggler position */
+    left: -12px; right: -12px; bottom: -12px;
+    border-radius: 15px;
+    background: radial-gradient(ellipse at center, rgba(0, 120, 220, 0.65) 0%, rgba(0, 120, 220, 0) 70%); /* Slightly stronger mid glow */
+    opacity: 0;
+    z-index: 0;
+    animation: pulse-glow-strong 2.5s infinite ease-in-out alternate 0.15s; /* Slower pulse */
+    pointer-events: none;
+}
+
+/* Toggler Button - Rectangular Capsule */
+.ai-assistant-toggler {
+    position: relative;
+    width: 240px; /* Increased capsule width */
+    height: 50px; /* Increased capsule height */
+    border-radius: 25px; /* Half of height */
+    background: linear-gradient(145deg, #2c313a, #202329);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255,255,255,0.02);
+    color: #b0c4de;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em; /* Increased font size */
+    font-weight: 600; /* Slightly bolder */
+    z-index: 10;
+    outline: none;
+    margin-bottom: 10px; /* Default space when collapsed */
+    transition: width 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6), /* Bouncier transitions */
+                height 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+                border-radius 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+                margin-bottom 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+                transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+                box-shadow 0.3s ease;
+}
+
+/* Smaller CIRCULAR toggler when widget is expanded */
+.ai-assistant-toggler.widget-expanded {
+    width: 38px;  /* Smaller circle diameter */
+    height: 38px;
+    border-radius: 50%; /* Make it a circle */
+    margin-bottom: -19px; /* Pulls widget up: half of new height */
+}
+
+.ai-assistant-toggler:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.22), inset 0 1px 1px rgba(255,255,255,0.02);
+}
+.ai-assistant-toggler:active {
+    transform: scale(1.01);
+}
+
+.toggler-icon {
+    width: 18px; /* Adjusted for new toggler height */
+    height: 18px;
+    stroke: #b0c4de;
+    stroke-width: 2.5;
+    transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6); /* Slower, bouncier */
+}
+/* Icon size doesn't need to change if the button itself shrinks proportionally */
+
+
+.ai-assistant-toggler[aria-expanded="true"] .toggler-icon {
+    transform: rotate(180deg);
+}
+
+.ai-assistant-toggler::before { /* Pulsing glow for toggler */
+    content: '';
+    position: absolute;
+    top: -5px; left: -5px; right: -5px; bottom: -5px;
+    border-radius: 24px; /* Initial capsule glow radius */
+    background: radial-gradient(ellipse at center, rgba(0, 150, 255, 0.75) 0%, rgba(0, 150, 255, 0) 68%);
+    opacity: 0;
+    z-index: -1;
+    animation: pulse-glow-strong 2.5s infinite ease-in-out; /* Slower pulse */
+    pointer-events: none;
+    transition: border-radius 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.ai-assistant-toggler.widget-expanded::before {
+    border-radius: 50%; /* Glow becomes circular for smaller button */
+}
+
+
+/* Main AI Widget (collapsible content) */
+.ai-assistant-widget {
+    width: 100%;
+    /* display: none; -- JS will set to flex then add expanded-widget */
+    flex-direction: column;
+    gap: 12px;
+    background-color: rgba(28, 30, 36, 0.92); /* Slightly more opaque */
+    backdrop-filter: blur(22px) saturate(120%);
+    -webkit-backdrop-filter: blur(22px) saturate(120%);
+    border-radius: 4px; /* Reduced border-radius for more rectangular shape */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.65); /* Stronger shadow */
+    position: relative;
+    z-index: 5;
+    padding: 15px;
+    padding-top: 30px; /* Space for the smaller toggler to sit above it slightly */
+
+    /* Animation properties */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-25px); /* Start slightly more up for a noticeable slide */
+    /* Slower and smoother transitions */
+    transition: max-height 0.7s cubic-bezier(0.5, 0, 0.1, 1), /* Example easing */
+                opacity 0.6s cubic-bezier(0.5, 0, 0.1, 1) 0.05s,
+                transform 0.7s cubic-bezier(0.5, 0, 0.1, 1),
+                padding-top 0.7s cubic-bezier(0.5, 0, 0.1, 1),
+                padding-bottom 0.7s cubic-bezier(0.5, 0, 0.1, 1),
+                border-width 0.7s cubic-bezier(0.5, 0, 0.1, 1); /* Also transition border for collapse */
+}
+
+.ai-assistant-widget.expanded-widget {
+    max-height: 70vh;
+    opacity: 1;
+    transform: translateY(0);
+    border-width: 1px; /* Ensure border is visible when expanded */
+}
+
+.ai-assistant-widget.collapsed-widget {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    transform: translateY(-25px) !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-width: 0 !important; /* Make border disappear on collapse */
+    /* display: none will be set by JS after transition */
+}
+
+
+@keyframes pulse-glow-strong {
+    0% { transform: scale(0.96); opacity: 0.5; }
+    50% { transform: scale(1.09); opacity: 1.0; } /* Max intensity */
+    100% { transform: scale(0.96); opacity: 0.5; }
+}
+
+/* Widget Header */
+.ai-widget-header {
+    color: #dfe6f0;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 10px; /* Reduced padding */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 6px; /* Reduced margin */
+    letter-spacing: 0.7px;
+}
+
+/* Response Area */
+.ai-response-area-embed {
+    min-height: 2.4em;
+    max-height: 150px; /* Set max height for scroll */
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: rgba(20, 22, 28, 0.5); /* Slightly more contrast */
+    color: #c8d4e0;
+    font-size: 1.0em;
+    line-height: 1.45;
+    overflow-y: auto; /* Enable vertical scroll */
+    overflow-x: hidden;
+    position: relative;
+    transition: opacity 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Scrollbar styling to match webpage */
+    scrollbar-width: thin;
+    scrollbar-color: #4a90e2 transparent;
+}
+
+/* Webkit scrollbar styling */
+.ai-response-area-embed::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ai-response-area-embed::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ai-response-area-embed::-webkit-scrollbar-thumb {
+    background-color: #4a90e2;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.ai-response-area-embed::-webkit-scrollbar-thumb:hover {
+    background-color: #357ABD;
+}
+
+/* ... (rest of .ai-response-area-embed.fade-out-embed, .ai-response-text-embed, .ai-typing-cursor-embed unchanged) ... */
+.ai-response-area-embed.fade-out-embed {
+    opacity: 0;
+}
+.ai-response-text-embed {
+    font-weight: 300;
+}
+.ai-typing-cursor-embed {
+    background-color: #a0b0c0;
+}
+
+
+/* Input Area */
+.ai-input-area-embed {
+    display: flex;
+    gap: 8px;
+}
+
+#naadirs-ai-assistant-container input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    background-color: rgba(20, 22, 28, 0.65);
+    color: #dfe6f0;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 5px;
+    font-size: 0.95em;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+#naadirs-ai-assistant-container input[type="text"]::placeholder {
+    color: #90a0b0;
+}
+
+#naadirs-ai-assistant-container input[type="text"]:focus {
+    border-color: rgba(0, 170, 255, 0.8);
+    box-shadow: 0 0 0 3.5px rgba(0, 170, 255, 0.25);
+    background-color: rgba(20, 22, 28, 0.75);
+}
+
+/* Send Button styling */
+#naadirs-ai-assistant-container button:not(.ai-assistant-toggler) {
+    padding: 10px 16px;
+    background: linear-gradient(145deg, #384a5c, #2c3a47);
+    color: #d0e0f0;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#naadirs-ai-assistant-container button:not(.ai-assistant-toggler):hover {
+    background: linear-gradient(145deg, #42566b, #334352);
+}
+#naadirs-ai-assistant-container button:not(.ai-assistant-toggler):active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+#naadirs-ai-assistant-container button:not(.ai-assistant-toggler):disabled {
+    background: rgba(50, 60, 75, 0.5);
+    color: #788898;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}

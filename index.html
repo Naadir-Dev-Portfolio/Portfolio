@@ -7,6 +7,7 @@
   <title>Naadir Duglas — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gemini-ai-style.css">
   <style>
     lottie-player {
       width: 100% !important;
@@ -73,34 +74,27 @@
           </li>
           <li>
             <a href="#books">
-              <!-- Books (outline) -->
-              <svg xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-width="2">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                <path d="M20 6H6.5A2.5 2.5 0 0 0 4 8.5v11"/>
-                <path d="M20 6a2 2 0 0 1 2 2v11.5"/>
-                <path d="M4 6v11"/>
+              <!-- Books (book style icon) -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" width="24" height="24">
+                <path d="M3 19.5V6a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <path d="M5 6v14"/>
+                <path d="M19 6v14"/>
+                <path d="M9 6v14"/>
               </svg>
               Books
             </a>
           </li>
           <li>
-            <a href="https://sample.com" target="_blank">
-              <!-- W.I.P (outline loader) -->
-              <svg xmlns="http://www.w3.org/2000/svg"
-                  class="icon"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-width="2">
-                <circle cx="12" cy="12" r="10" opacity="0.2"/>
-                <path d="M22 12a10 10 0 0 0-10-10" stroke-linecap="round"/>
+            <a id="nav-ai-link" style="cursor:pointer; display: flex; align-items: center; gap: 6px;">
+              <!-- AI icon (3 stars style) -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" width="24" height="24">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="8" cy="12" r="1.5" fill="currentColor" />
+                <circle cx="12" cy="8" r="1.5" fill="currentColor" />
+                <circle cx="16" cy="12" r="1.5" fill="currentColor" />
+                <circle cx="12" cy="16" r="1.5" fill="currentColor" />
               </svg>
-              W.I.P
+              AI
             </a>
           </li>
           <li>
@@ -138,7 +132,9 @@
         </p>
         <lottie-player id="about-lottie" src="images/Lottiesfiles/location.json"  background="transparent"  speed="2" width="150" height="150" style="margin: 0 auto;"  loop  autoplay></lottie-player>
         <p>
-          <strong><a href="#projects" class="view-projects-link">View my projects below</a></strong>
+          <strong>
+            View my <a href="#projects" class="view-projects-link" id="view-projects-link" style="text-decoration: underline; color: #003366;">Projects</a> below or talk to my <a href="#naadirs-ai-assistant-container" id="view-ai-assistant-link" style="cursor:pointer; text-decoration: underline; color: #003366;">AI Assistant</a>
+          </strong>
         </p>
       </div>
     </div>
@@ -149,6 +145,15 @@
       </svg>
     </a>
   </section>
+
+  <section id="naadirs-ai-assistant-container"
+          data-system-prompt="You are 'Oracle', a sophisticated AI providing insightful and concise answers. Maintain a professional, slightly enigmatic tone. Your responses should be short, suitable for a compact display."
+          data-placeholder="I am Naadir's AI assitant, Ask me something..."
+          data-button-text="Submit"
+          data-initial-message="Awaiting your query."
+          data-typing-speed="40">
+    <!-- gemini-logic.js will inject the UI here -->
+</section>
 
   <main class="content-box">
     <section id="projects" class="section section-light">
@@ -333,5 +338,6 @@
 
   <script src="script.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  </body>
+  <script src="gemini-logic.js"></script>  
+</body>
 </html>

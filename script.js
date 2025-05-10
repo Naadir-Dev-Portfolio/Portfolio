@@ -431,3 +431,130 @@ document.querySelectorAll(".video-card").forEach(cardEl => {
     `;
   });
 });
+
+// Smooth scroll to element by id with optional offset
+function smoothScrollToId(id, offset = 0) {
+  const el = document.getElementById(id);
+  if (el) {
+    const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition + offset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+}
+
+// Expand AI assistant toggle button if collapsed
+function expandAIAssistant() {
+  const aiContainer = document.getElementById('naadirs-ai-assistant-container');
+  if (!aiContainer) return;
+  const toggler = aiContainer.querySelector('.ai-assistant-toggler');
+  if (toggler && toggler.getAttribute('aria-expanded') === 'false') {
+    toggler.click();
+  }
+}
+
+// Event listener for "View my projects below" link
+document.addEventListener('DOMContentLoaded', () => {
+  const viewProjectsLink = document.getElementById('view-projects-link');
+  if (viewProjectsLink) {
+    viewProjectsLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      smoothScrollToId('projects');
+    });
+  }
+
+  function scrollToAndExpandAI() {
+    smoothScrollToId('naadirs-ai-assistant-container', -200);
+    setTimeout(() => {
+      expandAIAssistant();
+      setTimeout(() => {
+        const aiContainer = document.getElementById('naadirs-ai-assistant-container');
+        if (aiContainer) {
+          const rect = aiContainer.getBoundingClientRect();
+          if (rect.top < 0) {
+            window.scrollBy({ top: rect.top - 400, behavior: 'smooth' });
+          }
+        }
+      }, 300);
+    }, 600);
+  }
+
+  // Event listener for "AI assistant" link
+  const viewAIAssistantLink = document.getElementById('view-ai-assistant-link');
+  if (viewAIAssistantLink) {
+    viewAIAssistantLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToAndExpandAI();
+    });
+  }
+});
+
+// Smooth scroll to element by id with optional offset
+function smoothScrollToId(id, offset = 0) {
+  const el = document.getElementById(id);
+  if (el) {
+    const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition + offset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+}
+
+// Expand AI assistant toggle button if collapsed
+function expandAIAssistant() {
+  const aiContainer = document.getElementById('naadirs-ai-assistant-container');
+  if (!aiContainer) return;
+  const toggler = aiContainer.querySelector('.ai-assistant-toggler');
+  if (toggler && toggler.getAttribute('aria-expanded') === 'false') {
+    toggler.click();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Event listener for "View my projects below" link
+  const viewProjectsLink = document.getElementById('view-projects-link');
+  if (viewProjectsLink) {
+    viewProjectsLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      smoothScrollToId('projects');
+    });
+  }
+
+  function scrollToAndExpandAI() {
+    smoothScrollToId('naadirs-ai-assistant-container', -100);
+    setTimeout(() => {
+      expandAIAssistant();
+      setTimeout(() => {
+        const aiContainer = document.getElementById('naadirs-ai-assistant-container');
+        if (aiContainer) {
+          const rect = aiContainer.getBoundingClientRect();
+          if (rect.top < 0) {
+            window.scrollBy({ top: rect.top - 400, behavior: 'smooth' });
+          }
+        }
+      }, 300);
+    }, 600);
+  }
+
+  // Event listener for "AI assistant" link
+  const viewAIAssistantLink = document.getElementById('view-ai-assistant-link');
+  if (viewAIAssistantLink) {
+    viewAIAssistantLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToAndExpandAI();
+    });
+  }
+
+  // Event listener for nav bar "AI" link (replacing W.I.P)
+  const navAILink = document.getElementById('nav-ai-link');
+  if (navAILink) {
+    navAILink.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToAndExpandAI();
+    });
+  }
+});
