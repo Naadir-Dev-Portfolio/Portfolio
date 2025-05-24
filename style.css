@@ -105,6 +105,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: #ededed;
   letter-spacing: 0.01em;
 }
+.pipe {
+  font-weight: bold;
+  padding: 0 0.4em; /* adjust horizontal spacing here */
+}
+
+
 .subtitle span { display: inline; }
 
 /* About me */
